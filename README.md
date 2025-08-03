@@ -10,7 +10,7 @@ I'm Ashutosh Kumar, a passionate MERN Stack Developer with expertise in building
 
 ## 🚀 Live Demo
 
-🔗 **[View Portfolio Live](https://your-portfolio-url.vercel.app/)** *(Update with your actual deployment URL)*
+🔗 **[View Portfolio Live](https://ashutosh-port-folio.vercel.app/)**
 
 ## 🛠️ Tech Stack
 
