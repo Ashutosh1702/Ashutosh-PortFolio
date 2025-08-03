@@ -1,0 +1,32 @@
+<svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="currencyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8245ec;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="150" fill="url(#currencyGrad)" rx="10"/>
+  <rect x="20" y="20" width="160" height="110" fill="white" rx="5" opacity="0.9"/>
+  
+  <!-- Currency Symbols -->
+  <text x="50" y="55" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#8245ec">$</text>
+  <text x="150" y="55" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#a855f7">€</text>
+  
+  <!-- Exchange Arrow -->
+  <g transform="translate(100, 45)">
+    <path d="M-15 0 L15 0" stroke="#8245ec" stroke-width="3" fill="none"/>
+    <path d="M10 -5 L15 0 L10 5" stroke="#8245ec" stroke-width="3" fill="none"/>
+    <path d="M-10 5 L-15 0 L-10 -5" stroke="#8245ec" stroke-width="3" fill="none"/>
+  </g>
+  
+  <!-- Input Fields -->
+  <rect x="35" y="70" width="40" height="15" fill="#f8f9fa" stroke="#8245ec" stroke-width="1" rx="2"/>
+  <rect x="125" y="70" width="40" height="15" fill="#f8f9fa" stroke="#a855f7" stroke-width="1" rx="2"/>
+  
+  <!-- Numbers -->
+  <text x="55" y="81" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">100</text>
+  <text x="145" y="81" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">85</text>
+  
+  <text x="100" y="105" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#8245ec" text-anchor="middle">Currency</text>
+  <text x="100" y="120" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#8245ec" text-anchor="middle">Converter</text>
+</svg>
