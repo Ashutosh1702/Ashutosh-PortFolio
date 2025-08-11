@@ -2,28 +2,37 @@ import React from "react";
 import ReactTypingEffect from "react-typing-effect";
 import Tilt from "react-parallax-tilt";
 import profileImage from "../../assets/Profile/profile.jpg";
-import resumePDF from "../../assets/Resume/AshutoshTechYantra.pdf";
+import resumePDF from "../../assets/Resume/Ashutosh_Resume.pdf";
+import { useTheme } from "../../contexts/ThemeContext";
 
 const About = () => {
+  const { isDarkMode } = useTheme();
+  
   return (
     <section
       id="about"
-      className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
+      className={`py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32 ${
+        isDarkMode ? '' : 'bg-white'
+      }`}
     >
       <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-12">
         {/* Left Side */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           {/* Greeting */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-2 leading-tight ${
+            isDarkMode ? 'text-white' : 'text-gray-900'
+          }`}>
             Hi, I am
           </h1>
           {/* Name */}
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
+          <h2 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight ${
+            isDarkMode ? 'text-white' : 'text-gray-900'
+          }`}>
             Ashutosh Kumar
           </h2>
           {/* Skills Heading with Typing Effect */}
           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
-            <span className="text-white">I am a </span>
+            <span className={isDarkMode ? 'text-white' : 'text-gray-900'}>I am a </span>
             <ReactTypingEffect
               text={["MERN Stack Developer", "UI/UX Designer", "Coder"]}
               speed={100}
@@ -36,7 +45,9 @@ const About = () => {
             />
           </h3>
           {/* About Me Paragraph */}
-          <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
+          <p className={`text-base sm:text-lg md:text-lg mb-10 mt-8 leading-relaxed ${
+            isDarkMode ? 'text-gray-400' : 'text-gray-600'
+          }`}>
             I am a passionate MERN Stack Developer with expertise in building
             dynamic, scalable web applications using MongoDB, Express.js, React,
             and Node.js. With a strong foundation in both frontend and backend

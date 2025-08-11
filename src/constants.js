@@ -49,6 +49,7 @@ import universityLogo from './assets/education_logo/university.png';
 import ecommerceAppLogo from './assets/work_logo/ecommerce_app.svg';
 import videoCallingAppLogo from './assets/work_logo/video_calling_app.svg';
 import currencyConverterAppLogo from './assets/work_logo/currency_converter_app.svg';
+import portfolioAppLogo from './assets/work_logo/portfolio_app.svg';
 
 
 export const SkillsInfo = [
@@ -145,16 +146,26 @@ export const SkillsInfo = [
   export const projects = [
     {
       id: 0,
+      title: "Personal Portfolio Website",
+      description:
+        "A modern, responsive personal portfolio website showcasing my skills, projects, and experience. Built with React.js and Tailwind CSS, featuring smooth animations, interactive components, contact form with EmailJS integration, and a clean, professional design. The portfolio includes sections for about me, skills, education, experience, projects, and contact information.",
+      image: portfolioAppLogo,
+      tags: ["React JS", "Tailwind CSS", "EmailJS", "Responsive Design", "Vite", "Modern UI/UX"],
+      github: "https://github.com/Ashutosh1702/Ashutosh-PortFolio",
+      webapp: "https://ashutosh-port-folio-mvhm.vercel.app/",
+    },
+    {
+      id: 1,
       title: "E-Commerce Shopping App",
       description:
         "A comprehensive full-stack e-commerce application built with modern web technologies. Features include product catalog, shopping cart, user authentication, payment integration, order management, and admin dashboard. The app provides a seamless shopping experience with responsive design and secure payment processing.",
       image: ecommerceAppLogo,
       tags: ["React JS", "Node.js", "MongoDB", "Express", "Payment Gateway", "JWT", "Tailwind CSS"],
-      github: "https://github.com/Ashutosh1702/Shopify-Ecommerce-App",
-      webapp: "https://shopify-ecommerce-app-jyt1.vercel.app/",
+      github: "https://github.com/Ashutosh1702/Ecommerce-App",
+      webapp: "https://ecommerce-app-3u1f.vercel.app/",
     },
     {
-      id: 1,
+      id: 2,
       title: "Video Calling Application",
       description:
         "A real-time video calling application with advanced features like screen sharing, chat messaging, and multi-participant calls. Built using WebRTC technology for peer-to-peer communication, offering high-quality video and audio streaming with a user-friendly interface.",
@@ -162,15 +173,5 @@ export const SkillsInfo = [
       tags: ["React JS", "WebRTC", "Socket.io", "Node.js", "Express", "Real-time Communication"],
       github: "https://github.com/Ashutosh1702/Video_Call_App",
       webapp: "https://video-call-app-beryl.vercel.app/",
-    },
-    {
-      id: 2,
-      title: "Currency Converter App",
-      description:
-        "A dynamic currency converter application that provides real-time exchange rates for over 150+ currencies worldwide. Features include historical data visualization, favorite currency pairs, offline support, and beautiful charts. Uses live API data for accurate and up-to-date conversion rates.",
-      image: currencyConverterAppLogo,
-      tags: ["React JS", "API Integration", "Chart.js", "Local Storage", "Responsive Design"],
-      github: "https://github.com/ashutosh/currency-converter",
-      webapp: "https://currency-converter-live.netlify.app/",
     },
   ];  
