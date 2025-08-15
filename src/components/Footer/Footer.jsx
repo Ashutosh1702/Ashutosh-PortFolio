@@ -1,7 +1,9 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaPhone, FaEnvelope } from "react-icons/fa";
+import { useTheme } from "../../contexts/ThemeContext";
 
 const Footer = () => {
+  const { isDarkMode } = useTheme();
   // Smooth scroll function
   const handleScroll = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -11,7 +13,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
+    <footer className={`py-8 px-[12vw] md:px-[7vw] lg:px-[20vw] ${
+      isDarkMode ? 'text-white' : 'text-gray-900 bg-gray-50'
+    }`}>
       <div className="container mx-auto text-center">
         {/* Name / Logo */}
         <h2 className="text-xl font-semibold text-purple-500">Ashutosh Kumar</h2>
@@ -28,7 +32,9 @@ const Footer = () => {
             <button
               key={index}
               onClick={() => handleScroll(item.id)}
-              className="hover:text-purple-500 text-sm sm:text-base my-1"
+              className={`hover:text-purple-500 text-sm sm:text-base my-1 ${
+                isDarkMode ? 'text-white' : 'text-gray-700'
+              }`}
             >
               {item.name}
             </button>
@@ -46,7 +52,9 @@ const Footer = () => {
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl hover:text-purple-500 transition-transform transform hover:scale-110"
+              className={`text-xl hover:text-purple-500 transition-transform transform hover:scale-110 ${
+                isDarkMode ? 'text-white' : 'text-gray-700'
+              }`}
             >
               {item.icon}
             </a>
@@ -55,13 +63,17 @@ const Footer = () => {
 
         {/* Contact Information */}
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 mt-6">
-          <div className="flex items-center space-x-2 text-gray-300">
+          <div className={`flex items-center space-x-2 ${
+            isDarkMode ? 'text-gray-300' : 'text-gray-600'
+          }`}>
             <FaPhone className="text-purple-500" />
             <a href="tel:+917779883377" className="hover:text-purple-500 transition-colors">
               +91 7779883377
             </a>
           </div>
-          <div className="flex items-center space-x-2 text-gray-300">
+          <div className={`flex items-center space-x-2 ${
+            isDarkMode ? 'text-gray-300' : 'text-gray-600'
+          }`}>
             <FaEnvelope className="text-purple-500" />
             <a href="mailto:ashucreater06@gmail.com" className="hover:text-purple-500 transition-colors">
               ashucreater06@gmail.com

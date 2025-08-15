@@ -8,6 +8,7 @@ const Contact = () => {
   const form = useRef();
   const [isSent, setIsSent] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const { isDarkMode } = useTheme();
 
   // EmailJS configuration
   const EMAILJS_CONFIG = {
@@ -65,7 +66,7 @@ const Contact = () => {
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
-          theme: "dark",
+          theme: isDarkMode ? "dark" : "light",
         });
         console.log("Success toast triggered!");
       } else {
@@ -90,7 +91,7 @@ const Contact = () => {
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
-          theme: "dark",
+          theme: isDarkMode ? "dark" : "light",
         });
         return;
       }
@@ -123,16 +124,18 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center justify-center py-24 px-[12vw] md:px-[7vw] lg:px-[20vw]"
+      className={`flex flex-col items-center justify-center py-24 px-[12vw] md:px-[7vw] lg:px-[20vw] ${
+        isDarkMode ? '' : 'bg-white'
+      }`}
     >
       {/* Toast Container */}
       <ToastContainer />
 
       {/* Section Title */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">CONTACT</h2>
+        <h2 className={`text-4xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>CONTACT</h2>
         <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
+        <p className={`mt-4 text-lg font-semibold ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
           Ready to bring value to your team! Reach out for job opportunities, collaborations, or project discussions.
         </p>
         <div className="flex flex-wrap justify-center gap-4 mt-4 text-sm text-purple-400">
@@ -143,11 +146,19 @@ const Contact = () => {
       </div>
 
       {/* Contact Form */}
-      <div className="mt-8 w-full max-w-md bg-[#0d081f] p-6 rounded-lg shadow-lg border border-gray-700">
-        <h3 className="text-xl font-semibold text-white text-center">
+      <div className={`mt-8 w-full max-w-md p-6 rounded-lg shadow-lg border ${
+        isDarkMode 
+          ? 'bg-[#0d081f] border-gray-700' 
+          : 'bg-white border-gray-300 shadow-xl'
+      }`}>
+        <h3 className={`text-xl font-semibold text-center ${
+          isDarkMode ? 'text-white' : 'text-gray-900'
+        }`}>
           Let's Connect - I'm Ready to Contribute! <span className="ml-1">🚀</span>
         </h3>
-        <p className="text-gray-400 text-center mt-2 text-sm">
+        <p className={`text-center mt-2 text-sm ${
+          isDarkMode ? 'text-gray-400' : 'text-gray-600'
+        }`}>
           Recruiters & Hiring Managers - Let's discuss how I can add value to your team
         </p>
 
@@ -157,25 +168,41 @@ const Contact = () => {
             name="user_email"
             placeholder="Your Email"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className={`w-full p-3 rounded-md border focus:outline-none focus:border-purple-500 ${
+              isDarkMode 
+                ? 'bg-[#131025] text-white border-gray-600' 
+                : 'bg-gray-50 text-gray-900 border-gray-300'
+            }`}
           />
           <input
             type="text"
             name="user_name"
             placeholder="Your Name / Company Name"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className={`w-full p-3 rounded-md border focus:outline-none focus:border-purple-500 ${
+              isDarkMode 
+                ? 'bg-[#131025] text-white border-gray-600' 
+                : 'bg-gray-50 text-gray-900 border-gray-300'
+            }`}
           />
           <input
             type="text"
             name="company"
             placeholder="Company / Organization (Optional)"
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className={`w-full p-3 rounded-md border focus:outline-none focus:border-purple-500 ${
+              isDarkMode 
+                ? 'bg-[#131025] text-white border-gray-600' 
+                : 'bg-gray-50 text-gray-900 border-gray-300'
+            }`}
           />
           <select
             name="inquiry_type"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className={`w-full p-3 rounded-md border focus:outline-none focus:border-purple-500 ${
+              isDarkMode 
+                ? 'bg-[#131025] text-white border-gray-600' 
+                : 'bg-gray-50 text-gray-900 border-gray-300'
+            }`}
           >
             <option value="">Select Inquiry Type</option>
             <option value="job_opportunity">Job Opportunity</option>
@@ -189,14 +216,22 @@ const Contact = () => {
             name="subject"
             placeholder="Subject (e.g., Full Stack Developer Position)"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className={`w-full p-3 rounded-md border focus:outline-none focus:border-purple-500 ${
+              isDarkMode 
+                ? 'bg-[#131025] text-white border-gray-600' 
+                : 'bg-gray-50 text-gray-900 border-gray-300'
+            }`}
           />
           <textarea
             name="message"
             placeholder="Your message... (Please include job details, project requirements, or any specific questions)"
             rows="5"
             required
-            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+            className={`w-full p-3 rounded-md border focus:outline-none focus:border-purple-500 ${
+              isDarkMode 
+                ? 'bg-[#131025] text-white border-gray-600' 
+                : 'bg-gray-50 text-gray-900 border-gray-300'
+            }`}
           />
           
 
