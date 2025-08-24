@@ -4,7 +4,6 @@ import cssLogo from './assets/tech_logo/css.png';
 // import sassLogo from './assets/tech_logo/sass.png'; // File not found
 import javascriptLogo from './assets/tech_logo/javascript.png';
 import reactjsLogo from './assets/tech_logo/reactjs.png';
-import angularLogo from './assets/tech_logo/angular.png';
 import reduxLogo from './assets/tech_logo/redux.png';
 // import nextjsLogo from './assets/tech_logo/nextjs.png'; // File not found
 import tailwindcssLogo from './assets/tech_logo/tailwindcss.png';
@@ -61,7 +60,6 @@ export const SkillsInfo = [
       // { name: 'SASS', logo: sassLogo }, // Logo file not found
       { name: 'JavaScript', logo: javascriptLogo },
       { name: 'React JS', logo: reactjsLogo },
-      { name: 'Angular', logo: angularLogo },
       { name: 'Redux', logo: reduxLogo },
       // { name: 'Next JS', logo: nextjsLogo }, // Logo file not found
       { name: 'Tailwind CSS', logo: tailwindcssLogo },
