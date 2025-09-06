@@ -2,7 +2,7 @@ import React from "react";
 import ReactTypingEffect from "react-typing-effect";
 import Tilt from "react-parallax-tilt";
 import profileImage from "../../assets/Profile/Ashuutoshnewpic.jpg";
-import resumePDF from "../../assets/Resume/Ashutosh_Resume.pdf";
+import resumePDF from "../../assets/Resume/AshutoshResume (3).pdf";
 import { useTheme } from "../../contexts/ThemeContext";
 
 const About = () => {
@@ -57,7 +57,7 @@ const About = () => {
           {/* Resume Button */}
           <a
             href={resumePDF}
-            download="Ashutosh_Kumar_Resume.pdf"
+            download="AshutoshResume (3).pdf"
             className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
             style={{
               background: "linear-gradient(90deg, #8245ec, #a855f7)",
