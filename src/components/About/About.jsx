@@ -1,7 +1,7 @@
 import React from "react";
 import ReactTypingEffect from "react-typing-effect";
 import Tilt from "react-parallax-tilt";
-import profileImage from "../../assets/Profile/profile.jpg";
+import profileImage from "../../assets/Profile/Ashuutoshnewpic.jpg";
 import resumePDF from "../../assets/Resume/Ashutosh_Resume.pdf";
 import { useTheme } from "../../contexts/ThemeContext";
 
@@ -70,7 +70,7 @@ const About = () => {
         {/* Right Side */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full"
+            className="w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 border-4 border-purple-700 rounded-full overflow-hidden"
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
             perspective={1000}
@@ -78,11 +78,18 @@ const About = () => {
             transitionSpeed={1000}
             gyroscope={true}
           >
-            <img
-              src={profileImage}
-              alt="Tarun Kaushik"
-              className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
-            />
+            <div className="w-full h-full flex items-center justify-center overflow-hidden rounded-full p-0.5">
+              <img
+                src={profileImage}
+                alt="Ashutosh Kumar"
+                className="w-[98%] h-[98%] object-cover rounded-full"
+                style={{
+                  objectPosition: 'center 20%',
+                  aspectRatio: '1/1',
+                  border: '3px solid rgba(130, 69, 236, 0.15)'
+                }}
+              />
+            </div>
           </Tilt>
         </div>
       </div>
