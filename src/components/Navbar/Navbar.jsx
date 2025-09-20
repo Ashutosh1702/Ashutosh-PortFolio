@@ -42,11 +42,10 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
-        isScrolled 
-          ? isDarkMode 
-            ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" 
-            : "bg-white bg-opacity-90 backdrop-blur-md shadow-md"
-          : "bg-transparent"
+        // Fully opaque. No borders or shadows in light mode to avoid any visible line.
+        isDarkMode
+          ? (isScrolled ? "bg-[#050414] shadow-md" : "bg-[#050414]")
+          : "bg-white"
       }`}
     >
       <div className={`py-5 flex justify-between items-center ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>

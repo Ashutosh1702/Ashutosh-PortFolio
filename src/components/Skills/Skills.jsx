@@ -76,7 +76,11 @@ const Skills = () => {
                       alt={`${skill.name} logo`}
                       className="w-8 h-8 sm:w-10 sm:h-10 mb-2"
                     />
-                    <span className="text-xs sm:text-sm text-gray-300 font-medium leading-tight">
+                    <span
+                      className={`text-xs sm:text-sm font-medium leading-tight ${
+                        isDarkMode ? "text-gray-300" : "text-gray-800"
+                      }`}
+                    >
                       {skill.name}
                     </span>
                   </div>

@@ -7,34 +7,40 @@ import { useTheme } from "../../contexts/ThemeContext";
 
 const About = () => {
   const { isDarkMode } = useTheme();
-  
+
   return (
     <section
       id="about"
       className={`py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32 ${
-        isDarkMode ? '' : 'bg-white'
+        isDarkMode ? "" : "bg-white"
       }`}
     >
       <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-12">
         {/* Left Side */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           {/* Greeting */}
-          <h1 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-2 leading-tight ${
-            isDarkMode ? 'text-white' : 'text-gray-900'
-          }`}>
+          <h1
+            className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-2 leading-tight ${
+              isDarkMode ? "text-white" : "text-gray-900"
+            }`}
+          >
             Hi, I am
           </h1>
           {/* Name */}
-          <h2 className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight ${
-            isDarkMode ? 'text-white' : 'text-gray-900'
-          }`}>
+          <h2
+            className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight ${
+              isDarkMode ? "text-white" : "text-gray-900"
+            }`}
+          >
             Ashutosh Kumar
           </h2>
           {/* Skills Heading with Typing Effect */}
           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
-            <span className={isDarkMode ? 'text-white' : 'text-gray-900'}>I am a </span>
+            <span className={isDarkMode ? "text-white" : "text-gray-900"}>
+              I am a{" "}
+            </span>
             <ReactTypingEffect
-              text={["MERN Stack Developer", "UI/UX Designer", "Coder"]}
+              text={["Coder...","React Developer...","MERN Stack Developer..."]}
               speed={100}
               eraseSpeed={50}
               typingDelay={500}
@@ -45,14 +51,16 @@ const About = () => {
             />
           </h3>
           {/* About Me Paragraph */}
-          <p className={`text-base sm:text-lg md:text-lg mb-10 mt-8 leading-relaxed ${
-            isDarkMode ? 'text-gray-400' : 'text-gray-600'
-          }`}>
+          <p
+            className={`text-base sm:text-lg md:text-lg mb-10 mt-8 leading-relaxed ${
+              isDarkMode ? "text-gray-400" : "text-gray-600"
+            }`}
+          >
             I am a passionate MERN Stack Developer with expertise in building
             dynamic, scalable web applications using MongoDB, Express.js, React,
             and Node.js. With a strong foundation in both frontend and backend
             development, I create seamless user experiences through responsive
-            design and robust server-side architecture. 
+            design and robust server-side architecture.
           </p>
           {/* Resume Button */}
           <a
@@ -70,7 +78,7 @@ const About = () => {
         {/* Right Side */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <Tilt
-            className="w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 border-4 border-purple-700 rounded-full overflow-hidden"
+            className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-96 xl:h-96 border-4 border-purple-700 rounded-full overflow-hidden"
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
             perspective={1000}
@@ -84,9 +92,9 @@ const About = () => {
                 alt="Ashutosh Kumar"
                 className="w-[98%] h-[98%] object-cover rounded-full"
                 style={{
-                  objectPosition: 'center 20%',
-                  aspectRatio: '1/1',
-                  border: '3px solid rgba(130, 69, 236, 0.15)'
+                  objectPosition: "center 20%",
+                  aspectRatio: "1/1",
+                  border: "3px solid rgba(130, 69, 236, 0.15)",
                 }}
               />
             </div>
