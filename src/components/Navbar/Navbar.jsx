@@ -53,7 +53,7 @@ const Navbar = () => {
         <div className="text-lg font-semibold cursor-pointer">
           <span className="text-[#8245ec]">&lt;</span>
           <span className={isDarkMode ? 'text-white' : 'text-gray-900'}>Ashutosh</span>
-          <span className="text-[#8245ec]">/</span>
+          <span className="text-[#8245ec] mx-1">/</span>
           <span className={isDarkMode ? 'text-white' : 'text-gray-900'}>Kumar</span>
           <span className="text-[#8245ec]">&gt;</span>
         </div>

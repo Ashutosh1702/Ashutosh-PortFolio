@@ -40,7 +40,7 @@ const About = () => {
               I am a{" "}
             </span>
             <ReactTypingEffect
-              text={["Coder...","React Developer...","MERN Stack Developer..."]}
+              text={["Coder", "Software Developer"]}
               speed={100}
               eraseSpeed={50}
               typingDelay={500}
@@ -56,9 +56,9 @@ const About = () => {
               isDarkMode ? "text-gray-400" : "text-gray-600"
             }`}
           >
-            I am a passionate MERN Stack Developer with expertise in building
-            dynamic, scalable web applications using MongoDB, Express.js, React,
-            and Node.js. With a strong foundation in both frontend and backend
+            I am a passionate Software Developer with expertise in building
+            dynamic, scalable web and mobile applications using MongoDB, Express.js, React,
+            React Native, Node.js, and SharePoint Framework (SPFx). With a strong foundation in both frontend and backend
             development, I create seamless user experiences through responsive
             design and robust server-side architecture.
           </p>

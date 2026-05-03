@@ -1,0 +1,21 @@
+<svg viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&amp;display=swap');
+      .text-dark { fill: #013466; font-family: 'Nunito', sans-serif; font-size: 90px; font-weight: 800; letter-spacing: -2px; }
+    </style>
+  </defs>
+
+  <!-- Mark -->
+  <g transform="translate(10, 15)">
+    <!-- Light Blue Top Curve -->
+    <path fill="#00AEEF" d="M 45,0 C 80,0 100,10 90,40 C 80,65 40,85 10,70 C -10,60 -10,15 45,0 Z" />
+    <!-- Dark Blue Bottom Curve -->
+    <path fill="#013466" d="M 55,95 C 20,95 0,85 10,55 C 20,30 60,10 90,25 C 110,35 110,80 55,95 Z" />
+    <!-- Overlap / Intersection simulated with a darker shade -->
+    <path fill="#0063A6" d="M 85,40 C 75,65 40,80 15,60 C 25,35 60,20 85,40 Z" />
+  </g>
+
+  <!-- Text -->
+  <text x="130" y="85" class="text-dark">smalsus</text>
+</svg>

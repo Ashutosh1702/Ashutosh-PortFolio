@@ -32,11 +32,16 @@ import vercelLogo from './assets/tech_logo/vercel.png';
 // import postgreLogo from './assets/tech_logo/postgre.png'; // File not found
 // import csharpLogo from './assets/tech_logo/csharp.png'; // File not found
 
+import sharepointLogo from './assets/tech_logo/sharepoint.svg';
+import cursorLogo from './assets/tech_logo/cursor.svg';
+import antigravityLogo from './assets/tech_logo/antigravity.svg';
+
 // Experience Section Logo's
 import webverseLogo from './assets/company_logo/webverse_logo.png';
 import agcLogo from './assets/company_logo/agc_logo.png';
 import newtonschoolLogo from './assets/company_logo/newtonschool_logo.png';
 import almabetterLogo from './assets/company_logo/AlmaBetter_Logo.jpg';
+import smalsusLogo from './assets/company_logo/smalsus_logo.svg';
 
 // Education Section Logo's
 // import glaLogo from './assets/education_logo/gla_logo.png'; // File not found
@@ -49,6 +54,7 @@ import ecommerceAppLogo from './assets/work_logo/ecommerce_app.svg';
 import videoCallingAppLogo from './assets/work_logo/video_calling_app.svg';
 import currencyConverterAppLogo from './assets/work_logo/currency_converter_app.svg';
 import portfolioAppLogo from './assets/work_logo/portfolio_app.svg';
+import skywingsAppLogo from './assets/work_logo/skywings_app.svg';
 
 
 export const SkillsInfo = [
@@ -66,6 +72,7 @@ export const SkillsInfo = [
       // { name: 'GSAP', logo: gsapLogo }, // Logo file not found
       { name: 'Material UI', logo: materialuiLogo },
       { name: 'Bootstrap', logo: bootstrapLogo },
+      { name: 'React Native', logo: reactjsLogo },
     ],
   },
   {
@@ -77,6 +84,7 @@ export const SkillsInfo = [
       // { name: 'MySQL', logo: mysqlLogo }, // Logo file not found
       { name: 'MongoDB', logo: mongodbLogo },
       { name: 'Firebase', logo: firebaseLogo },
+      { name: 'SharePoint', logo: sharepointLogo },
       // { name: 'PostgreSQL', logo: postgreLogo }, // Logo file not found
     ],
   },
@@ -102,12 +110,30 @@ export const SkillsInfo = [
       { name: 'Compass', logo: mcLogo },
       { name: 'Vercel', logo: vercelLogo },
       { name: 'Netlify', logo: netlifyLogo },
+      { name: 'Cursor AI', logo: cursorLogo },
+      { name: 'Antigravity', logo: antigravityLogo },
       // { name: 'Figma', logo: figmaLogo }, // Logo file not found
     ],
   },
 ];
 
   export const experiences = [
+    {
+      id: 1,
+      img: smalsusLogo,
+      role: "React & SPFx Developer",
+      company: "Smalsus Infolabs Pvt. Ltd.",
+      date: "Jan 2026 to Present",
+      desc: "Currently working as a React and SPFx Developer, building modern and responsive web applications and SharePoint Framework (SPFx) web parts. Responsible for developing reusable UI components, integrating with backend services, and ensuring high performance and scalable solutions.",
+      skills: [
+        "React JS",
+        "SPFx",
+        "JavaScript",
+        "TypeScript",
+        "SharePoint",
+        "Frontend Development"
+      ],
+    },
     {
       id: 0,
       img: almabetterLogo,
@@ -144,6 +170,16 @@ export const SkillsInfo = [
   export const projects = [
     {
       id: 0,
+      title: "Skywings Next Generation Corporate Website",
+      description:
+        "A professional and modern corporate website developed for Skywings NextGen Tech Pvt. Ltd. The site features a clean, responsive design that showcases the company's services, mission, and portfolio. Built with a focus on performance and seamless user experience, ensuring compatibility across all devices.",
+      image: skywingsAppLogo,
+      tags: ["React JS", "Tailwind CSS", "Corporate", "Responsive Design", "Frontend"],
+      github: "https://github.com/Ashutosh1702/Skywings-NextGen-Tech-Pvt-Ltd",
+      webapp: "https://www.skywingsnextgen.com/",
+    },
+    {
+      id: 1,
       title: "Personal Portfolio Website",
       description:
         "A modern, responsive personal portfolio website showcasing my skills, projects, and experience. Built with React.js and Tailwind CSS, featuring smooth animations, interactive components, contact form with EmailJS integration, and a clean, professional design. The portfolio includes sections for about me, skills, education, experience, projects, and contact information.",
@@ -153,7 +189,7 @@ export const SkillsInfo = [
       webapp: "https://ashutosh-port-folio-mvhm.vercel.app/",
     },
     {
-      id: 1,
+      id: 2,
       title: "E-Commerce Shopping App",
       description:
         "A comprehensive full-stack e-commerce application built with modern web technologies. Features include product catalog, shopping cart, user authentication, payment integration, order management, and admin dashboard. The app provides a seamless shopping experience with responsive design and secure payment processing.",
@@ -161,15 +197,5 @@ export const SkillsInfo = [
       tags: ["React JS", "Node.js", "MongoDB", "Express", "Payment Gateway", "JWT", "Tailwind CSS"],
       github: "https://github.com/Ashutosh1702/Ecommerce-App",
       webapp: "https://ecommerce-app-3u1f.vercel.app/",
-    },
-    {
-      id: 2,
-      title: "Video Calling Application",
-      description:
-        "A real-time video calling application with advanced features like screen sharing, chat messaging, and multi-participant calls. Built using WebRTC technology for peer-to-peer communication, offering high-quality video and audio streaming with a user-friendly interface.",
-      image: videoCallingAppLogo,
-      tags: ["React JS", "WebRTC", "Socket.io", "Node.js", "Express", "Real-time Communication"],
-      github: "https://github.com/Ashutosh1702/Video_Call_App",
-      webapp: "https://video-call-app-beryl.vercel.app/",
     },
   ];  
